@@ -1,0 +1,89 @@
+$colorPrincipal: #E639C9;
+$colorFondosGen: #000000;
+$colorFondosCar: #023e8a;
+
+/*COLORES DE FONDO*/
+.colorFPRI
+{
+    background-color: $colorPrincipal;
+}
+
+.colorFGEN
+{
+    background-color: $colorFondosGen;
+}
+
+.colorFCAR
+{
+    background-color: $colorFondosCar;
+}
+
+/*COLORES DE LETRA*/
+.colorLPRI
+{
+    color: $colorPrincipal;
+}
+
+/*LETRAS*/
+.fuente
+{
+    font-family: 'nunito', sans-serif;
+}
+
+
+/*HEADER*/
+.bordeNAV
+{
+    list-style: none;
+    border: solid 2px $colorPrincipal;
+}
+
+
+
+.dBlock
+{
+    display: block;
+}
+
+
+/*CENTRADO DE BARRAS DE NAVEGACIÓN*/
+.justificadoHEAD
+{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.justificadoFOOTER
+{
+    display: flex;
+    justify-content: space-evenly;
+    border: solid 2px $colorPrincipal;
+}
+
+/*DETALLES DE BARRAS DE NAVEGACIÓN*/
+.links
+{
+    text-decoration: none;
+    color: $colorPrincipal;
+    font-size: 2rem;
+    margin: 10px;
+
+    transition: all;
+}
+
+.links:hover
+{    
+    background-color: $colorFondosGen;
+    border: solid 2px $colorPrincipal;
+}
+
+/*HOVER EN CARRUSEL*/
+.fondoCAR /*transicion contenidos*/
+{
+    transition: all;
+}
+
+.fondoCAR:hover
+{
+    background-color: $colorFondosCar;
+}

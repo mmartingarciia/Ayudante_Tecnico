@@ -1,0 +1,683 @@
+/*GENERAL*/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    width: 100%;
+	height: 600px;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+    background-image: url(../Fondos/Coder_3.jpg);
+}
+
+footer
+{
+    color: #E639C9;
+    background-color:black;
+
+    grid-area: footer;
+}
+
+input
+{
+    display: block;
+}
+
+/*DESPLEGABLE*/
+.menu ul{
+    list-style: none;
+}
+
+.menu .navbar{
+    float:left;
+}
+
+.menu .navbar a{
+    margin:2rem;
+    text-decoration: none;
+    display: block;
+}
+
+.menu .desple {
+    display: none;
+}
+
+.menu .navbar:hover .desple{
+    display: block;
+}
+
+/*CLASES*/
+
+
+.links2
+{
+    text-decoration: none;
+    color: #E639C9;
+    font-size: 2rem;
+    margin: 10px;
+    list-style:none;
+
+    transition: all;
+}
+
+.navbar /*barra de navegacion superior*/
+{
+    
+    display: inline;
+    margin: 1rem;
+
+    transition: all;
+}
+
+.navbar:hover
+{
+    background-color: black;
+    border: solid 2px #E639C9;
+}
+
+.navFOOT /*barra de navegacion inferior*/
+{
+    display: inline;
+    margin: 3rem;
+
+    transition: all;
+}
+
+.navFOOT:hover
+{
+    background-color: black;
+    border: solid 2px #E639C9;
+}
+
+.justificado /*justificado de barras de navegación inicio*/
+{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.justificadoFOOTER /*justificado de barra de navegación footer*/
+{
+    display: flex;
+    justify-content: space-evenly;
+    border: solid 2px #E639C9;
+}
+
+.fondoCON /*transicion contenidos*/
+{
+    transition: all;
+}
+
+.fondoCON:hover
+{
+    background-color: #023e8a;
+}
+
+.margenT
+{
+    margin-top: 20px;
+}
+
+.tituloPAG /*propiedades del titulo de la pagina*/
+{
+    color: mintcream;
+    font-size: 6rem;
+    text-align: center;
+
+    grid-area: titPAG;
+}
+
+.titulosNAV /*propiedades de los titulos de barras de navegación*/
+{
+    color:#E639C9;
+    font-size: 2rem;
+}
+
+.titulosCON /*propiedades del titulo de los contenidos*/
+{
+    color: mintcream;
+    font-weight: bolder;
+    font-size: 5rem;
+}
+
+.titulosART /*propiedades de cada titulo de los articles*/
+{
+    color:mintcream;
+}
+
+.contenidoART /*propiedades de los articles*/
+{
+    color:gray;
+}
+
+.centrado
+{
+    text-align: center; 
+    margin: 5rem;
+}
+
+.enlaces
+{
+    text-decoration: none;
+}
+
+.interlineadoGRANDE
+{
+    line-height: 9rem;
+}
+
+.interlineadoCHICO
+{
+    line-height: 3rem;
+}
+
+.letraCONTENIDOS
+{
+    font-size: 3rem;
+}
+
+.letraCHICA
+{
+    font-size: 2rem;
+}
+
+.colorART
+{
+    color: white;
+}
+
+
+/*MEDIA QUERY*/
+@media only screen and (min-width: 0px) 
+{
+    /*GRID PAGINA*/
+    .padreGRID
+    {
+        display:grid;
+
+        grid-template-areas:
+            /*"botMENU titPAG"*/
+            "bot titPAG ."
+            ". cont ." 
+            ". artCOM ."
+            ". artNOR ."
+            ". artLYT ."
+            ". artPRO ."
+            ". artDAT ."
+            ". footer .";
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }
+
+    .bot
+    {
+        grid-area: bot;
+    }
+
+    .titPAG
+    {
+        grid-area: titPAG;
+    }
+
+    .cont
+    {
+        grid-area: cont;
+    }
+
+    .artCOM
+    {
+        grid-area: artCOM;
+    }
+
+    .artNOR
+    {
+        grid-area: artNOR;
+    }
+
+    .artLYT
+    {
+        grid-area: artLYT;
+    }
+
+    .artPRO
+    {
+        grid-area: artPRO;
+    }
+
+    /*GRID FOOTER*/
+    .gridFOOT
+    {
+        display:grid;
+
+        grid-template-areas:
+            "COM NOR"
+            "LYT PRO"
+            "DAT INI";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 10px;
+
+        margin: 5px 1px;
+    }
+
+    .COM
+    {
+        grid-area: COM;
+        justify-self: center;
+    }
+
+    .NOR
+    {
+        grid-area: NOR;
+        justify-self: center;
+    }
+
+    .LYT
+    {
+        grid-area: LYT;
+        justify-self: center;
+    }
+
+    .PRO
+    {
+        grid-area: PRO;
+        justify-self: center;
+    }
+
+    .DAT
+    {
+        grid-area: DAT;
+        justify-self: center;
+    }
+
+    .INI
+    {
+        grid-area: INI;
+        justify-self: center;
+    }
+    
+    /*CAMBIOS DE DISPLAY*/
+    .margenF
+    {
+        margin: 5px;
+    }
+
+    .justificado
+    {
+        display: none;
+    }
+
+    .centrado
+    {
+        border: solid 2px #E639C9;
+    }
+
+    .tituloPAG /*propiedades del titulo de la pagina*/
+    {
+        color: mintcream;
+        font-size: 5rem;
+        text-align: center;
+        
+        grid-area: titPAG;
+    }
+
+    .titulosCON /*propiedades del titulo de los contenidos*/
+    {
+        color: mintcream;
+        font-weight: bolder;
+        font-size: 4rem;
+    }
+
+    .interlineadoGRANDE
+    {
+        line-height: 7rem;
+    }
+
+    .interlineadoCHICO
+    {
+        line-height: 3rem;
+    }
+
+    .letraCONTENIDOS
+    {
+        font-size: 3rem;
+    }
+
+    .letraCHICA
+    {
+        font-size: 2rem;
+    }
+
+
+
+    /* BARRA DE NAVEGACION*/
+        #main_container
+        {
+            text-align: center;
+        }
+        .boton
+        {
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 3px;
+            padding: 10px 15px;
+            display: inline-block;
+            color:white;
+            background-color: blue;
+
+            grid-area: botMENU;
+        }
+
+        /* .boton:focus
+        {
+
+        }  */
+}
+
+@media only screen and (min-width: 768px) 
+{
+    /*GRID PAGINA*/
+    .padreGRID
+    {
+        display:grid;
+
+        grid-template-areas:
+            /*"botMENU titPAG"*/
+            "titPAG"
+            "cont" 
+            "artCOM"
+            "artNOR"
+            "artLYT"
+            "artPRO"
+            "artDAT"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }
+
+    .cont
+    {
+        grid-area: cont;
+    }
+
+    .artCOM
+    {
+        grid-area: artCOM;
+    }
+
+    .artNOR
+    {
+        grid-area: artNOR;
+    }
+
+    .artLYT
+    {
+        grid-area: artLYT;
+    }
+
+    .artPRO
+    {
+        grid-area: artPRO;
+    }
+
+    /*GRID FOOTER*/
+    .gridFOOT
+    {
+        display:grid;
+
+        grid-template-areas:
+            "COM NOR"
+            "LYT PRO" 
+            "DAT INI";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        justify-content: center;
+    }
+
+    .COM
+    {
+        grid-area: COM;
+    }
+
+    .NOR
+    {
+        grid-area: NOR;
+    }
+
+    .LYT
+    {
+        grid-area: LYT;
+    }
+
+    .PRO
+    {
+        grid-area: PRO;
+    }
+
+    .DAT
+    {
+        grid-area: DAT;
+    }
+
+    .INI
+    {
+        grid-area: INI;
+    }
+    
+    /*CAMBIOS DE DISPLAY*/
+    .justificado
+    {
+        display: none;
+    }
+
+    .centrado
+    {
+        border: solid 2px #E639C9;
+    }
+
+    /*BOTON ESCONDIDO*/
+    .boton
+    {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) 
+{
+    /*DESPLEGABLE*/
+    .menu ul{
+        list-style: none;
+    }
+
+    .menu .navbar{
+        float:left;
+    }
+
+    .menu .navbar a{
+        margin:2rem;
+        text-decoration: none;
+        display: block;
+    }
+
+    .menu .desple {
+        display: none;
+    }
+
+    .menu .navbar:hover .desple{
+        display: block;
+    }
+
+    /*GRIDS*/
+    .navGRID /*GRID DE LA BARRA DE NAVEGACION SUPERIOR*/
+    {
+        display:grid;
+
+        grid-template-areas:
+            "navCOM navNOR navLYT navPRO navDAT";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-column-gap: 70px;
+            
+    }
+
+    .navCOM
+    {
+        grid-area: navCOM;
+    }
+    .navNOR
+    {
+        grid-area: navNOR;
+    }
+    .navLYT
+    {
+        grid-area: navLYT;
+    }
+    .navPRO
+    {
+        grid-area: navPRO;
+    }
+    .navDAT
+    {
+        grid-area: navDAT;
+    }
+
+    .sectionGRID /*GRID DE LA SECCION CONTENIDOS*/
+    {
+        display:grid;
+
+        grid-template-areas:
+            ". . cont . ." 
+            "artCOM artNOR artLYT artPRO artDAT";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+    }
+
+    .cont
+    {
+        grid-area: cont;
+        justify-self: center;
+    }
+
+    .artCOM
+    {
+        grid-area: artCOM;
+        justify-self: center;
+    }
+
+    .artNOR
+    {
+        grid-area: artNOR;
+        justify-self: center;
+    }
+
+    .artLYT
+    {
+        grid-area: artLYT;
+        justify-self: center;
+    }
+
+    .artPRO
+    {
+        grid-area: artPRO;
+        justify-self: center;
+    }
+
+    .artDAT
+    {
+        grid-area: artDAT;
+        justify-self: center;
+    }
+
+    .navfGRID /*GRID DE LA BARRA DE NAVEGACION INFERIOR*/
+    {
+        display:grid;
+
+        grid-template-areas:
+            "navfCOM navfNOR navfLYT navfPRO navfDAT navfINI";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-column-gap: 70px;
+            
+    }
+
+    .navfCOM
+    {
+        grid-area: navfCOM;
+    }
+    .navfNOR
+    {
+        grid-area: navfNOR;
+    }
+    .navfLYT
+    {
+        grid-area: navfLYT;
+    }
+    .navfPRO
+    {
+        grid-area: navfPRO;
+    }
+    .navfDAT
+    {
+        grid-area: navfDAT;
+    }
+
+    .navfINI
+    {
+        grid-area: navfINI;
+    }
+
+    /*CLASES*/
+    .margen0
+    {
+        margin: 50px 5px;
+    }
+
+    .recuadro
+    {
+        border: solid 2px #E639C9;
+    }
+
+    .espaciadoART
+    {
+        margin: 20px;
+    }
+
+    .justificado /*justificado de barras de navegación inicio*/
+    {
+        display: flex;
+        justify-content:space-around;
+        border: solid 2px #E639C9;
+    }
+
+    .justificadoFOOTER /*justificado de barra de navegación footer*/
+    {
+        display: flex;
+        justify-content: space-around;
+        border: solid 2px #E639C9;
+    }
+    .centrado
+    {
+        border: none;
+    }
+
+    /*BOTON ESCONDIDO*/
+        .boton
+        {
+            display: none;
+        }
+}

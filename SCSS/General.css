@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/*COLORES DE FONDO*/
+.colorFPRI {
+  background-color: #E639C9;
+}
+
+.colorFGEN {
+  background-color: #000000;
+}
+
+.colorFCAR {
+  background-color: #023e8a;
+}
+
+/*COLORES DE LETRA*/
+.colorLPRI {
+  color: #E639C9;
+}
+
+/*LETRAS*/
+.fuente {
+  font-family: 'nunito', sans-serif;
+}
+
+/*HEADER*/
+.bordeNAV {
+  list-style: none;
+  border: solid 2px #E639C9;
+}
+
+.dBlock {
+  display: block;
+}
+
+/*CENTRADO DE BARRAS DE NAVEGACIÓN*/
+.justificadoHEAD {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.justificadoFOOTER {
+  display: flex;
+  justify-content: space-evenly;
+  border: solid 2px #E639C9;
+}
+
+/*DETALLES DE BARRAS DE NAVEGACIÓN*/
+.links {
+  text-decoration: none;
+  color: #E639C9;
+  font-size: 2rem;
+  margin: 10px;
+  transition: all;
+}
+
+.links:hover {
+  background-color: #000000;
+  border: solid 2px #E639C9;
+}
+
+/*HOVER EN CARRUSEL*/
+.fondoCAR {
+  transition: all;
+}
+
+.fondoCAR:hover {
+  background-color: #023e8a;
+}
+/*# sourceMappingURL=General.css.map */
